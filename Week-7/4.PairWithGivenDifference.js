@@ -1,5 +1,11 @@
-'use strict'
 'use strict';
+// 1 . Intialize a Map 
+// 2 . map keys will be elment of array  and map value will be frequency of that element in array 
+//3. Check if given num = 0 and any value in map is 2 return 1
+//4 if n equal to zero return 0
+//5 . iterate through array 
+// 5.1 check wether array each elemet + n exist in map keys if yes return 1
+//5. Return 0
 function pairwithGivenDifference(arr,n){
     let map = new Map();
     for (let  i in arr){

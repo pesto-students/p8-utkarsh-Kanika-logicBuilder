@@ -83,5 +83,7 @@ class stack {
 
 }
 
-console.log("output is",printPopedElementFromQueue("122214"));
-console.log("output is",printPopedElementFromQueue("12132142"));
+console.log("output is");
+printPopedElementFromQueue("122214");
+console.log("output is"); 
+printPopedElementFromQueue("12132142");

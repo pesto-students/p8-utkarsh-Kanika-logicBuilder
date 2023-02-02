@@ -1,6 +1,15 @@
-
-
-
+function DetecLoopInLinkedList(list){
+    let fast=list.head;
+    let slow=list.head;
+    while(slow!==null && fast!==null){
+        fast=fast.next.next;
+        if(slow===fast){
+            return true
+        }
+        slow=slow.next;
+    }
+    return false;
+}
 
 
 
@@ -43,3 +52,25 @@ function MakeLinkedList(arr){
 
 let list = MakeLinkedList([1,2,3,4]);
 console.log("Initial list \n",list);
+console.log("is list cycle:",DetecLoopInLinkedList(list));
+let list2 =MakeLinkedList([1,2,3,4]);
+//make list2 circular
+let lastElOFList2=list2.head;
+while(lastElOFList2.next===null){
+    lastElOFList2=lastElOFList2.next;
+}
+// adding head in the last elmenent 
+// so last elemet of list2 is attached with first element of list2
+// hence list is circuler
+lastElOFList2.next=list2.head;
+console.log("is list cycle:",DetecLoopInLinkedList(list2));
+
+
+
+
+
+
+
+
+
+

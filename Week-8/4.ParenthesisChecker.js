@@ -7,7 +7,7 @@ function parenthesisChecker(paranthesisArr){
     for(let i=0;i<paranthesisArr.length;i++){
         // if bracket is opening bracket push it into the stack
         if(paranthesisArr[i]==="(" || paranthesisArr[i]==="["|| paranthesisArr[i]==="{"){
-            st.push(arr[i])
+            st.push(paranthesisArr[i])
         }
         else{
             // if it closing brcaket pop the elment from stack 
@@ -24,9 +24,10 @@ function parenthesisChecker(paranthesisArr){
 }
 // function for finding closing symbol of openinig bracket 
 function ReverseOfBracket(el){
-    if(el=")") return "(";
-    else if(el="]") return "[";
-    else if(el="}") return "{";
+    if(el==")") 
+    return "(";
+    else if(el=="]") return "[";
+    else if(el=="}") return "{";
 }
 // stack implemetation
 class stack {
@@ -37,22 +38,23 @@ class stack {
     }
     push(el){
         this.top++
-        this.item[0]=el;
+        this.items[this.top]=el;
         
 
     }
     pop(){
         if(this.top===-1){
             console.log("stack is empty")
-            return
+            return -1;
         }
-        let x= this.item[this.top];
-        this.item[this.top]=undefined;
+        let x= this.items[this.top];
+        this.items[this.top]=undefined;
         this.top--
+        return x;
 
     }
     peek(){
-        return this.item[this.top]
+        return this.items[this.top]
     }
     IsEmpty(){
         if(this.top===-1){
@@ -65,7 +67,7 @@ class stack {
     }
 
 }
-let paranthesisArr=["{[{]}"];
+let paranthesisArr="{[{]}";
 console.log(parenthesisChecker(paranthesisArr));
 // function MakeStack(arr){
 //     st = new stack();

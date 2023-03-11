@@ -1,0 +1,72 @@
+#mainbox div{
+    height: 100px;
+    width:100px;  
+    transition: 2s; 
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mainbox {
+    position: relative;
+    width:200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+#mainbox:hover #red {
+    
+    transform:translate(-100px) rotate(90deg);
+   
+}
+#mainbox:hover #blue {
+    transform:translate(-100px) rotate(-90deg);
+   
+}
+#mainbox:hover #yellow {
+    
+    
+    transform:translate(100px) rotate(-90deg);
+   
+}
+#mainbox:hover #green { 
+     
+    transform: translate(100px)rotate(90deg);
+   
+}
+
+
+
+#red{
+   
+    top:0px;
+    position: absolute;
+    left:0px;
+    background-color: red;
+}
+#blue{
+    bottom:0;
+    position: absolute;
+    left:0;
+    background-color: blue;
+
+}
+#yellow{
+    top:0;
+    position: absolute;
+    right:0;
+    background-color: yellow;
+
+}
+#green{
+    background-color: green;
+    bottom:0;
+    position: absolute;
+    right:0;
+
+}
